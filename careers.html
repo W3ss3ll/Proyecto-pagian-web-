@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockstar Games - Carreras</title>
+    <style>
+        /* Estilos generales */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0c0c0c;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.8);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        header:hover {
+            background-color: rgba(26, 26, 26, 1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 20px 10px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Carreras específico */
+        .careers-hero {
+            height: 50vh;
+            background-image: url('https://iqzlvvxqxnxqxnxqxnxq.supabase.co/storage/v1/object/public/images/careers-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .careers-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .careers-hero h1 {
+            font-size: 3em;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .careers-content {
+            padding: 60px 0;
+        }
+        .careers-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .careers-intro h2 {
+            font-size: 2em;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        .careers-intro p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .job-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 204, 0, 0.2);
+        }
+        .job-card h3 {
+            font-size: 1.3em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+        .job-card p {
+            margin-bottom: 15px;
+        }
+        .apply-button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .apply-button:hover {
+            background-color: #ffd700;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img src="imagenes/rockstar-3.svg" alt="Rockstar Games Logo" height="30"></a></li>
+                    <li><a href="games.html">Juegos</a></li>
+                    <li><a href="newswire.html">Newswire</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="downloads.html">Descargas</a></li>
+                    <li><a href="support.html">Soporte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="careers-hero">
+            <h1>Carreras en Rockstar Games</h1>
+        </section>
+
+        <section class="container careers-content">
+            <div class="careers-intro">
+                <h2>Únete a nuestro equipo</h2>
+                <p>En Rockstar Games, buscamos personas apasionadas y creativas que quieran ser parte de la creación de los juegos más innovadores y emocionantes del mundo. Descubre las oportunidades que tenemos para ti.</p>
+            </div>
+            <div class="job-listings">
+                <div class="job-card">
+                    <h3>Diseñador de Niveles Senior</h3>
+                    <p>Buscamos un diseñador de niveles experimentado para trabajar en nuestros próximos títulos de mundo abierto.</p>
+                    <a href="#" class="apply-button">Aplicar</a>
+                </div>
+                <div class="job-card">
+                    <h3>Programador de IA</h3>
+                    <p>Únete a nuestro equipo de IA para crear comportamientos realistas y desafiantes para los NPCs en nuestros juegos.</p>
+                    <a href="#" class="apply-button">Aplicar</a>
+                </div>
+                <div class="job-card">
+                    <h3>Artista de Personajes 3D</h3>
+                    <p>Estamos buscando un artista talentoso para crear personajes detallados y expresivos para nuestros próximos proyectos.</p>
+                    <a href="#" class="apply-button">Aplicar</a>
+                </div>
+                <div class="job-card">
+                    <h3>Ingeniero de Motor de Juego</h3>
+                    <p>Trabaja en la tecnología que impulsa nuestros juegos de próxima generación.</p>
+                    <a href="#" class="apply-button">Aplicar</a>
+                </div>
+                <div class="job-card">
+                    <h3>Diseñador de Sonido</h3>
+                    <p>Crea paisajes sonoros inmersivos y efectos de sonido impactantes para nuestros mundos de juego.</p>
+                    <a href="#" class="apply-button">Aplicar</a>
+                </div>
+                <div class="job-card">
+                    <h3>Productor de Juegos</h3>
+                    <p>Lidera equipos multidisciplinarios en el desarrollo de nuestros próximos títulos AAA.</p>
+                    <a href="#" class="apply-button">Aplicar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">Acerca de</a>
+                <a href="careers.html">Carreras</a>
+                <a href="press.html">Prensa</a>
+                <a href="privacy.html">Privacidad</a>
+                <a href="terms.html">Términos</a>
+            </div>
+            <p>&copy; 2024 Rockstar Games. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
